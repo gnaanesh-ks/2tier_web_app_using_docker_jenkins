@@ -7,8 +7,8 @@ app = Flask(__name__)
 def get_db():
     return mysql.connector.connect(
         host=os.environ.get("DB_HOST", "db"),
-        user=os.environ.get("DB_USER", "appuser"),
-        password=os.environ.get("DB_PASSWORD", "apppassword123"),
+        user=os.environ.get("DB_USER", "user"),
+        password=os.environ.get("DB_PASSWORD", "password"),
         database=os.environ.get("DB_NAME", "posts_db"),
         port=int(os.environ.get("DB_PORT", 3306))
     )
