@@ -6,7 +6,8 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 git url: 'https://github.com/gnaanesh-ks/2tier_web_app_using_docker_jenkins.git',
-                    branch: 'main'
+                    branch: 'main',
+                    credentialsId: 'github-credentials'
             }
         }
 
